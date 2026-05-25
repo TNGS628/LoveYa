@@ -24,9 +24,9 @@ button{font-family:'Nunito',sans-serif;font-weight:700;border:none;border-radius
 #yesBtn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(233,108,138,0.6)}
 #noBtn{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);padding:16px 36px}
 #noBtn:hover{background:rgba(255,255,255,0.15)}
-.success{display:none}
-.success h1{font-size:2.8em;color:#f8c8d4;margin-bottom:16px}
-.success p{color:rgba(255,255,255,0.8);font-size:1.25em;line-height:1.7;margin-top:16px}
+#success{display:none}
+#success h1{font-size:2.8em;color:#f8c8d4;margin-bottom:16px}
+#success p{color:rgba(255,255,255,0.8);font-size:1.25em;line-height:1.7;margin-top:16px}
 .confetti-piece{position:fixed;width:8px;height:8px;border-radius:2px;animation:fall 3s ease-out forwards;pointer-events:none}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
 </style>
@@ -43,6 +43,11 @@ button{font-family:'Nunito',sans-serif;font-weight:700;border:none;border-radius
       <button id="yesBtn">Дааа 💖</button>
       <button id="noBtn">Чадкүээ</button>
     </div>
+  </div>
+  <div id="success">
+    <span style="font-size:5em;display:block;margin-bottom:16px;animation:float 3s ease-in-out infinite">✨</span>
+    <h1>Та хоёр болж байна!</h1>
+    <p>Чамтай хамт байх бүр өдрийг<br>тусгайхан болгоно гэдгээ амлаж байна 🌙</p>
   </div>
 </div>
 
@@ -79,7 +84,6 @@ function confetti() {
 
 let noclicks = 0;
 let yp = 16, np = 16;
-
 const noTexts = ['Үгүй','Итгэлтэй юу?','Нэг бодоод үз','Гуйя даа 🥺','Хажуудаа байлгаач...','Сүүлийн боломж шүү'];
 
 noBtn.addEventListener('click', () => {
